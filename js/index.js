@@ -251,3 +251,5 @@ function findPrime(number) {
 }
 
 findPrime(10);
+
+console.log("Using Git");

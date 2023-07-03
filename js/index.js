@@ -251,3 +251,23 @@ function findPrime(number) {
 }
 
 findPrime(10);
+
+const myArr = [1, 2, 3, 4];
+myArr.splice(myArr.indexOf(3), 0, "a", "b");
+console.log(myArr);
+
+const obj = [
+  {
+    id: 1,
+    name: "nit",
+  },
+  {
+    id: 2,
+    name: "wick",
+  },
+];
+
+console.log(obj.find((person) => person.name === "wick"));
+
+const msg = "Hello there";
+console.log(msg.split(" ").join("-"));

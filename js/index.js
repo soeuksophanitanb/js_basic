@@ -142,3 +142,112 @@ function isLandscape(width, height) {
 }
 
 console.log(isLandscape(200, 300));
+
+function fizzBuzz(number) {
+  if (typeof number !== "number") return "Not a Number";
+  if (number % 3 === 0 && number % 5 === 0) return "fizzbuzz";
+  if (number % 3 === 0) return "fizz";
+  if (number % 5 === 0) return "buzz";
+  return number;
+}
+
+console.log(fizzBuzz("4"));
+
+function speedLimit(speed, limit) {
+  let point = 0;
+  if (speed <= limit + 5) return "ok";
+  // let result = speed - limit;
+  // for (let i = 1; i <= result; i++) {
+  //   if (i % 5 === 0) {
+  //     point++;
+  //   }
+  // }
+  // if (point > 12) return "Licence Sus!";
+  // return point;
+  let result = Math.floor((speed - limit) / 5);
+  if (result >= 12) return "License Suspended";
+  return result;
+}
+
+console.log(speedLimit(71, 70));
+
+function findNum(number) {
+  for (let i = 1; i <= number; i++) {
+    if (i % 2 === 0) console.log(i, "Even");
+    else console.log(i, "Odd");
+  }
+}
+
+findNum(10);
+
+const arrr = [0, 2, 3, 4, "", 1];
+function countTrusy(arr) {
+  let count = 0;
+  for (let element of arrr) {
+    if (element) count++;
+  }
+  console.log("There are ", count);
+}
+
+countTrusy(arrr);
+
+function showProperties(obj) {
+  for (let key in obj) {
+    if (typeof obj[key] === "string") {
+      console.log(key, obj[key]);
+    }
+  }
+}
+
+const wick = {
+  name: "wick",
+  age: 12,
+  city: "PP",
+  birthYear: 2001,
+  username: "@wick",
+};
+showProperties(wick);
+
+function sumNum(number) {
+  let sum = 0;
+  for (let i = 0; i <= number; i++) {
+    if (i % 3 === 0 || i % 5 === 0) sum += i;
+  }
+  return sum;
+}
+console.log(sumNum(10));
+
+const scores = [90, 80, 50];
+function calMark(score) {
+  let total = 0;
+  let msg = "";
+  for (let element of score) {
+    total += element;
+  }
+  let avg = total / 3;
+  if (avg < 60) return (msg = "F");
+  if (avg < 70) return (msg = "D");
+  if (avg < 80) return (msg = "C");
+}
+
+console.log(calMark(scores));
+
+function showStar(row) {
+  for (let i = 0; i < row; i++) {
+    let pattern = "";
+    for (let j = 0; j <= i; j++) {
+      pattern += "*";
+    }
+    console.log(pattern);
+  }
+}
+
+showStar(10);
+
+function findPrime(number) {
+  for (let i = 1; i <= number; i++) {
+    if (i % 1 === 0 && i % i === 0) console.log(i);
+  }
+}
+
+findPrime(10);

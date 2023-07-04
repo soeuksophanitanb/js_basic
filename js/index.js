@@ -292,3 +292,10 @@ function arrayFromRange(min, max) {
 }
 
 console.log(arrayFromRange(1, 5));
+
+function includes(arr, search) {
+  for (let element of arr) if (element === search) return true;
+  return false;
+}
+
+console.log(includes(c, -1));

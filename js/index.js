@@ -271,3 +271,24 @@ console.log(obj.find((person) => person.name === "wick"));
 
 const msg = "Hello there";
 console.log(msg.split(" ").join("-"));
+
+const list = [1, 2, 3, 4, 5];
+
+const items = list
+  .filter((n) => n > 2)
+  .map((n) => ({ value: n }))
+  .filter((n) => n.value > 3);
+console.log(items);
+
+const c = [1, 2, 3, 4, 5, 6, 7, 8];
+
+const result = c.reduce((acc, currentvalue) => acc + currentvalue, 0);
+console.log(result);
+
+function arrayFromRange(min, max) {
+  const lists = [];
+  for (let i = min; i <= max; i++) lists.push(i);
+  return list;
+}
+
+console.log(arrayFromRange(1, 5));
